@@ -79,14 +79,5 @@ Ensure you have **Node.js** and **npm** or **yarn** installed.
 5. **Forcast** displays forecast data using **dummy data** (can be replaced with real data if available).
 6. **Error handling** ensures invalid city names are handled properly, showing an error message immediately.
 
-## Future Enhancements
-- Integrate a **premium API** to fetch a real multi-day forecast
-- Add **user preferences storage** for temperature unit and theme
-- Improve UI with more detailed weather animations
 
-## License
-This project is open-source and available under the [MIT License](LICENSE).
-
----
-Made with ❤️ using React & Vite
 
