@@ -50,7 +50,7 @@ Ensure you have **Node.js** and **npm** or **yarn** installed.
 ### Steps to Run the App
 1. **Clone the repository**
    ```sh
-   git clone [https://github.com/your-username/weather-app.git](https://github.com/Mananjot17/WeatherApp.git)
+   git clone https://github.com/Mananjot17/WeatherApp.git
    cd weather-app
    ```
 
