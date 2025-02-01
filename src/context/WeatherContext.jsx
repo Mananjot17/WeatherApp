@@ -13,7 +13,9 @@ export const WeatherProvider = ({ children }) => {
     queryKey: ["weather", city],
     queryFn: () => fetchWeather(city),
     refetchInterval: 30000,
+    refetchIntervalInBackground: true,
     enabled: !!city,
+    retry: false,
   });
 
   useEffect(() => {
