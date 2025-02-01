@@ -1,29 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaSearch, FaSun, FaCloudRain, FaWind, FaTint } from "react-icons/fa";
-import { useWeather } from "../context/WeatherContext";
 import SearchBar from "../components/SearchBar";
 import WeatherDisplay from "../components/WeatherDisplay";
 import Forcast from "../components/Forcast";
 
 const WeatherApp = () => {
   const [unit, setUnit] = useState("C");
-  const [city, setCity] = useState("");
-  const [weather, setWeather] = useState({
-    temp: 33,
-    humidity: 67,
-    windSpeed: 4,
-    condition: "Partly Cloudy",
-    forecast: [
-      { day: "Tue", temp: 31, condition: "Snowy" },
-      { day: "Wed", temp: 30, condition: "Cloudy" },
-      { day: "Thu", temp: 33, condition: "Cloudy" },
-      { day: "Fri", temp: 32, condition: "Rainy" },
-      { day: "Sat", temp: 33, condition: "Sunny" },
-      { day: "Sun", temp: 31, condition: "Snowy" },
-    ],
-  });
-
   const toggleUnit = () => setUnit(unit === "C" ? "F" : "C");
   const convertTemp = (temp) => (unit === "C" ? temp : (temp * 9) / 5 + 32);
 

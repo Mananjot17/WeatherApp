@@ -1,12 +1,11 @@
 import axios from "axios";
 
-const API_KEY = "YOUR_OPENWEATHERMAP_API_KEY";
-
-export const fetchWeather = async (city) => {
+export const fetchWeather = async ({ city }) => {
   try {
     const response = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
+      `http://api.weatherstack.com/forecast?access_key=bc45ab8dd71c58de6d8ac33b71d94bd1&query=${city}`
     );
+
     return response.data;
   } catch (error) {
     throw new Error("Failed to fetch weather data. Please try again.");
