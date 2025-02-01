@@ -9,14 +9,12 @@ export const WeatherProvider = ({ children }) => {
     localStorage.getItem("lastCity") || "Mumbai"
   );
 
-  const { data, error, refetch } = useQuery(
-    ["weather", city],
-    () => fetchWeather(city),
-    {
-      refetchInterval: 30000,
-      enabled: !!city,
-    }
-  );
+  const { data, error, refetch } = useQuery({
+    queryKey: ["weather", city],
+    queryFn: () => fetchWeather(city),
+    refetchInterval: 30000,
+    enabled: !!city,
+  });
 
   useEffect(() => {
     localStorage.setItem("lastCity", city);
